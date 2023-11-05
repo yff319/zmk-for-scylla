@@ -14,6 +14,7 @@
         combo1 {
             bindings = <&kp K_MUTE>;
             key-positions = <50 55>;
+            layers = <1>;
         };
 
         combo2 {
@@ -75,6 +76,21 @@
         };
     };
 
+    macros {
+        jingyin: jingyin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp LSHIFT>;
+            label = "JINGYIN";
+        };
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "NEW_MACRO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -130,17 +146,6 @@
 &kp LSHFT  &kp Z   &kp X   &kp C        &kp V   &kp B     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
                            &lt 1 SPACE  &trans  &trans    &trans  &trans  &trans
                                         &trans  &trans    &trans  &trans
-            >;
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-                                &trans  &trans    &trans  &trans
             >;
         };
     };
